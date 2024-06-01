@@ -142,7 +142,6 @@
 			children = (
 				0C4DA0D52C0B316A0071537E /* TodoView.swift */,
 				0C4DA0DE2C0B45300071537E /* PostView.swift */,
-				0C4DA0E02C0B453F0071537E /* FetchMachineShellView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,6 +161,7 @@
 				0C4DA0C92C0B2DC40071537E /* FetchMachine.swift */,
 				0C4DA0A32C0B15F30071537E /* FetchMachine.test.swift */,
 				0C4DA0EC2C0B47BF0071537E /* FetchMachineViewModel.swift */,
+				0C4DA0E02C0B453F0071537E /* FetchMachineShellView.swift */,
 			);
 			path = Machine;
 			sourceTree = "<group>";
