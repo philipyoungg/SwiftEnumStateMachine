@@ -20,7 +20,7 @@ struct ContentView: View {
         }.pickerStyle(SegmentedPickerStyle())
         switch self.page {
         case .Todo:
-            TodoView(vm: TodoViewModel())
+            TodoView(vm: TodoViewModel(fetchStrategy: .Mock))
         case .Post:
             PostView(vm: PostViewModel(fetcher: TypicodePostRepository()))
         }

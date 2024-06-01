@@ -28,7 +28,7 @@ class TodoViewModel: FetchMachineViewModel<Todo> {
     }
     var todoFetcher: TodoRepository
     
-    init(fetchStrategy: FetchStrategy = .Typicode) {
+    init(fetchStrategy: FetchStrategy) {
         self.fetchStrategy = fetchStrategy
         self.todoFetcher = fetchStrategy.fetcher
         super.init(initialState: .idle)
