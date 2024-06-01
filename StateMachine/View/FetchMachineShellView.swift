@@ -9,11 +9,11 @@ import Foundation
 import SwiftUI
 
 @MainActor
-struct ViewShell<T: Equatable, U: View>: View {
-    var vm: StatefulViewModel<T>
+struct FetchMachineShellView<T: Equatable, U: View>: View {
+    var vm: FetchMachineViewModel<T>
     var mainView: U
     
-    init(vm: StatefulViewModel<T>, mainView: U) {
+    init(vm: FetchMachineViewModel<T>, mainView: U) {
         self.vm = vm
         self.mainView = mainView
     }

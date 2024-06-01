@@ -12,7 +12,7 @@ struct TodoView: View {
     @StateObject var vm: TodoViewModel
     
     var body: some View {
-        ViewShell(vm: vm, mainView: mainView)
+        FetchMachineShellView(vm: vm, mainView: mainView)
     }
     
     var strategyPicker: some View {

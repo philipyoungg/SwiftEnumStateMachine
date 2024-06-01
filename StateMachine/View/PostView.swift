@@ -12,7 +12,7 @@ struct PostView: View {
     @StateObject var vm: PostViewModel
     
     var body: some View {
-        ViewShell(vm: vm, mainView: List {
+        FetchMachineShellView(vm: vm, mainView: List {
             ForEach(vm.data, id: \.id) { post in
                 VStack(alignment: .leading) {
                     Text(post.title).bold()

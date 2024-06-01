@@ -8,7 +8,7 @@
 import Foundation
 
 @MainActor
-class PostViewModel: StatefulViewModel<Post> {
+class PostViewModel: FetchMachineViewModel<Post> {
     var fetcher: PostFetchable
     init(fetcher: PostFetchable) {
         self.fetcher = fetcher

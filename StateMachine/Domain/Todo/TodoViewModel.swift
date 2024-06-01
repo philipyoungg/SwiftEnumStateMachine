@@ -9,7 +9,7 @@ import Foundation
 
 
 @MainActor
-class TodoViewModel: StatefulViewModel<Todo> {
+class TodoViewModel: FetchMachineViewModel<Todo> {
     enum FetchStrategy: String, CaseIterable {
         case Typicode, Mock
         

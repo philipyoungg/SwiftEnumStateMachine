@@ -20,11 +20,11 @@
 		0C4DA0D62C0B316A0071537E /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0D52C0B316A0071537E /* TodoView.swift */; };
 		0C4DA0D92C0B31C40071537E /* TodoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0D82C0B31C40071537E /* TodoError.swift */; };
 		0C4DA0DF2C0B45300071537E /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0DE2C0B45300071537E /* PostView.swift */; };
-		0C4DA0E12C0B453F0071537E /* StateMachineShellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0E02C0B453F0071537E /* StateMachineShellView.swift */; };
+		0C4DA0E12C0B453F0071537E /* FetchMachineShellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0E02C0B453F0071537E /* FetchMachineShellView.swift */; };
 		0C4DA0E52C0B45B00071537E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0E42C0B45B00071537E /* Post.swift */; };
 		0C4DA0E72C0B45C20071537E /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0E62C0B45C20071537E /* PostViewModel.swift */; };
 		0C4DA0EB2C0B46930071537E /* PostFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0EA2C0B46930071537E /* PostFetchable.swift */; };
-		0C4DA0ED2C0B47BF0071537E /* StatefulViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0EC2C0B47BF0071537E /* StatefulViewModel.swift */; };
+		0C4DA0ED2C0B47BF0071537E /* FetchMachineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0EC2C0B47BF0071537E /* FetchMachineViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,11 +53,11 @@
 		0C4DA0D52C0B316A0071537E /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
 		0C4DA0D82C0B31C40071537E /* TodoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoError.swift; sourceTree = "<group>"; };
 		0C4DA0DE2C0B45300071537E /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
-		0C4DA0E02C0B453F0071537E /* StateMachineShellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachineShellView.swift; sourceTree = "<group>"; };
+		0C4DA0E02C0B453F0071537E /* FetchMachineShellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchMachineShellView.swift; sourceTree = "<group>"; };
 		0C4DA0E42C0B45B00071537E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0C4DA0E62C0B45C20071537E /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		0C4DA0EA2C0B46930071537E /* PostFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFetchable.swift; sourceTree = "<group>"; };
-		0C4DA0EC2C0B47BF0071537E /* StatefulViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulViewModel.swift; sourceTree = "<group>"; };
+		0C4DA0EC2C0B47BF0071537E /* FetchMachineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchMachineViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +142,7 @@
 			children = (
 				0C4DA0D52C0B316A0071537E /* TodoView.swift */,
 				0C4DA0DE2C0B45300071537E /* PostView.swift */,
-				0C4DA0E02C0B453F0071537E /* StateMachineShellView.swift */,
+				0C4DA0E02C0B453F0071537E /* FetchMachineShellView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,7 +161,7 @@
 			children = (
 				0C4DA0C92C0B2DC40071537E /* FetchMachine.swift */,
 				0C4DA0A32C0B15F30071537E /* FetchMachine.test.swift */,
-				0C4DA0EC2C0B47BF0071537E /* StatefulViewModel.swift */,
+				0C4DA0EC2C0B47BF0071537E /* FetchMachineViewModel.swift */,
 			);
 			path = Machine;
 			sourceTree = "<group>";
@@ -283,9 +283,9 @@
 				0C4DA0D62C0B316A0071537E /* TodoView.swift in Sources */,
 				0C4DA0EB2C0B46930071537E /* PostFetchable.swift in Sources */,
 				0C4DA0942C0B15F10071537E /* ContentView.swift in Sources */,
-				0C4DA0E12C0B453F0071537E /* StateMachineShellView.swift in Sources */,
+				0C4DA0E12C0B453F0071537E /* FetchMachineShellView.swift in Sources */,
 				0C4DA0CD2C0B2DE30071537E /* TodoFetchable.swift in Sources */,
-				0C4DA0ED2C0B47BF0071537E /* StatefulViewModel.swift in Sources */,
+				0C4DA0ED2C0B47BF0071537E /* FetchMachineViewModel.swift in Sources */,
 				0C4DA0922C0B15F10071537E /* StateMachineApp.swift in Sources */,
 				0C4DA0DF2C0B45300071537E /* PostView.swift in Sources */,
 				0C4DA0D02C0B31390071537E /* Todo.swift in Sources */,
