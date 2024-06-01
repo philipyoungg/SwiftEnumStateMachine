@@ -105,10 +105,8 @@
 		0C4DA0902C0B15F10071537E /* StateMachine */ = {
 			isa = PBXGroup;
 			children = (
+				0C4DA0F72C0B77320071537E /* App */,
 				0C4DA0F12C0B71CC0071537E /* Lib */,
-				0C4DA0E22C0B45710071537E /* Machine */,
-				0C4DA0DD2C0B45160071537E /* Domain */,
-				0C4DA0DC2C0B450E0071537E /* View */,
 				0C4DA0932C0B15F10071537E /* ContentView.swift */,
 				0C4DA0912C0B15F10071537E /* StateMachineApp.swift */,
 				0C4DA0952C0B15F20071537E /* Assets.xcassets */,
@@ -198,6 +196,16 @@
 				0C4DA0F22C0B71E10071537E /* StateMachineError.swift */,
 			);
 			path = StateMachine;
+			sourceTree = "<group>";
+		};
+		0C4DA0F72C0B77320071537E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0C4DA0E22C0B45710071537E /* Machine */,
+				0C4DA0DD2C0B45160071537E /* Domain */,
+				0C4DA0DC2C0B450E0071537E /* View */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
