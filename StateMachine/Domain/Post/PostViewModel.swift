@@ -9,8 +9,8 @@ import Foundation
 
 @MainActor
 class PostViewModel: FetchMachineViewModel<Post> {
-    var fetcher: PostFetchable
-    init(fetcher: PostFetchable) {
+    var fetcher: PostRepository
+    init(fetcher: PostRepository) {
         self.fetcher = fetcher
         super.init(initialState: .idle)
     }

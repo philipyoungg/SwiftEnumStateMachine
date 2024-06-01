@@ -14,7 +14,7 @@
 		0C4DA0A42C0B15F30071537E /* FetchMachine.test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0A32C0B15F30071537E /* FetchMachine.test.swift */; };
 		0C4DA0CA2C0B2DC40071537E /* FetchMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0C92C0B2DC40071537E /* FetchMachine.swift */; };
 		0C4DA0CB2C0B2DC40071537E /* FetchMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0C92C0B2DC40071537E /* FetchMachine.swift */; };
-		0C4DA0CD2C0B2DE30071537E /* TodoFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0CC2C0B2DE30071537E /* TodoFetchable.swift */; };
+		0C4DA0CD2C0B2DE30071537E /* TodoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0CC2C0B2DE30071537E /* TodoRepository.swift */; };
 		0C4DA0D02C0B31390071537E /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0CF2C0B31390071537E /* Todo.swift */; };
 		0C4DA0D32C0B315B0071537E /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0D22C0B315B0071537E /* TodoViewModel.swift */; };
 		0C4DA0D62C0B316A0071537E /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0D52C0B316A0071537E /* TodoView.swift */; };
@@ -23,8 +23,12 @@
 		0C4DA0E12C0B453F0071537E /* FetchMachineShellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0E02C0B453F0071537E /* FetchMachineShellView.swift */; };
 		0C4DA0E52C0B45B00071537E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0E42C0B45B00071537E /* Post.swift */; };
 		0C4DA0E72C0B45C20071537E /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0E62C0B45C20071537E /* PostViewModel.swift */; };
-		0C4DA0EB2C0B46930071537E /* PostFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0EA2C0B46930071537E /* PostFetchable.swift */; };
+		0C4DA0EB2C0B46930071537E /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0EA2C0B46930071537E /* PostRepository.swift */; };
 		0C4DA0ED2C0B47BF0071537E /* FetchMachineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0EC2C0B47BF0071537E /* FetchMachineViewModel.swift */; };
+		0C4DA0F02C0B71C80071537E /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0EF2C0B71C80071537E /* StateMachine.swift */; };
+		0C4DA0F32C0B71E10071537E /* StateMachineError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0F22C0B71E10071537E /* StateMachineError.swift */; };
+		0C4DA0F42C0B751C0071537E /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0EF2C0B71C80071537E /* StateMachine.swift */; };
+		0C4DA0F52C0B75250071537E /* StateMachineError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4DA0F22C0B71E10071537E /* StateMachineError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +51,7 @@
 		0C4DA09F2C0B15F30071537E /* StateMachineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StateMachineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C4DA0A32C0B15F30071537E /* FetchMachine.test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchMachine.test.swift; sourceTree = "<group>"; };
 		0C4DA0C92C0B2DC40071537E /* FetchMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchMachine.swift; sourceTree = "<group>"; };
-		0C4DA0CC2C0B2DE30071537E /* TodoFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoFetchable.swift; sourceTree = "<group>"; };
+		0C4DA0CC2C0B2DE30071537E /* TodoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRepository.swift; sourceTree = "<group>"; };
 		0C4DA0CF2C0B31390071537E /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		0C4DA0D22C0B315B0071537E /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
 		0C4DA0D52C0B316A0071537E /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
@@ -56,8 +60,10 @@
 		0C4DA0E02C0B453F0071537E /* FetchMachineShellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchMachineShellView.swift; sourceTree = "<group>"; };
 		0C4DA0E42C0B45B00071537E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0C4DA0E62C0B45C20071537E /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
-		0C4DA0EA2C0B46930071537E /* PostFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFetchable.swift; sourceTree = "<group>"; };
+		0C4DA0EA2C0B46930071537E /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
 		0C4DA0EC2C0B47BF0071537E /* FetchMachineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchMachineViewModel.swift; sourceTree = "<group>"; };
+		0C4DA0EF2C0B71C80071537E /* StateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachine.swift; sourceTree = "<group>"; };
+		0C4DA0F22C0B71E10071537E /* StateMachineError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachineError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		0C4DA0902C0B15F10071537E /* StateMachine */ = {
 			isa = PBXGroup;
 			children = (
+				0C4DA0F12C0B71CC0071537E /* Lib */,
 				0C4DA0E22C0B45710071537E /* Machine */,
 				0C4DA0DD2C0B45160071537E /* Domain */,
 				0C4DA0DC2C0B450E0071537E /* View */,
@@ -132,7 +139,7 @@
 				0C4DA0CF2C0B31390071537E /* Todo.swift */,
 				0C4DA0D82C0B31C40071537E /* TodoError.swift */,
 				0C4DA0D22C0B315B0071537E /* TodoViewModel.swift */,
-				0C4DA0CC2C0B2DE30071537E /* TodoFetchable.swift */,
+				0C4DA0CC2C0B2DE30071537E /* TodoRepository.swift */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -171,9 +178,26 @@
 			children = (
 				0C4DA0E42C0B45B00071537E /* Post.swift */,
 				0C4DA0E62C0B45C20071537E /* PostViewModel.swift */,
-				0C4DA0EA2C0B46930071537E /* PostFetchable.swift */,
+				0C4DA0EA2C0B46930071537E /* PostRepository.swift */,
 			);
 			path = Post;
+			sourceTree = "<group>";
+		};
+		0C4DA0F12C0B71CC0071537E /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				0C4DA0F62C0B76BD0071537E /* StateMachine */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		0C4DA0F62C0B76BD0071537E /* StateMachine */ = {
+			isa = PBXGroup;
+			children = (
+				0C4DA0EF2C0B71C80071537E /* StateMachine.swift */,
+				0C4DA0F22C0B71E10071537E /* StateMachineError.swift */,
+			);
+			path = StateMachine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,17 +301,19 @@
 			files = (
 				0C4DA0E72C0B45C20071537E /* PostViewModel.swift in Sources */,
 				0C4DA0D32C0B315B0071537E /* TodoViewModel.swift in Sources */,
+				0C4DA0F32C0B71E10071537E /* StateMachineError.swift in Sources */,
 				0C4DA0E52C0B45B00071537E /* Post.swift in Sources */,
 				0C4DA0CA2C0B2DC40071537E /* FetchMachine.swift in Sources */,
 				0C4DA0D92C0B31C40071537E /* TodoError.swift in Sources */,
 				0C4DA0D62C0B316A0071537E /* TodoView.swift in Sources */,
-				0C4DA0EB2C0B46930071537E /* PostFetchable.swift in Sources */,
+				0C4DA0EB2C0B46930071537E /* PostRepository.swift in Sources */,
 				0C4DA0942C0B15F10071537E /* ContentView.swift in Sources */,
 				0C4DA0E12C0B453F0071537E /* FetchMachineShellView.swift in Sources */,
-				0C4DA0CD2C0B2DE30071537E /* TodoFetchable.swift in Sources */,
+				0C4DA0CD2C0B2DE30071537E /* TodoRepository.swift in Sources */,
 				0C4DA0ED2C0B47BF0071537E /* FetchMachineViewModel.swift in Sources */,
 				0C4DA0922C0B15F10071537E /* StateMachineApp.swift in Sources */,
 				0C4DA0DF2C0B45300071537E /* PostView.swift in Sources */,
+				0C4DA0F02C0B71C80071537E /* StateMachine.swift in Sources */,
 				0C4DA0D02C0B31390071537E /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +323,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C4DA0CB2C0B2DC40071537E /* FetchMachine.swift in Sources */,
+				0C4DA0F42C0B751C0071537E /* StateMachine.swift in Sources */,
+				0C4DA0F52C0B75250071537E /* StateMachineError.swift in Sources */,
 				0C4DA0A42C0B15F30071537E /* FetchMachine.test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

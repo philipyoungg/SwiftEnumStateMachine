@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol PostFetchable {
+protocol PostRepository {
     func fetch() async throws -> [Post]
 }
 
-class TypicodePostFetcher: PostFetchable {
+class TypicodePostRepository: PostRepository {
     func fetch() async throws -> [Post] {
         let (data, response) =  try await URLSession.shared.data(from: .init(string: "https://jsonplaceholder.typicode.com/posts")!)
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {

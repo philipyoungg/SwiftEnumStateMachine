@@ -7,12 +7,6 @@
 
 import Foundation
 
-protocol StateMachine: Equatable {
-    associatedtype Action
-    associatedtype Effect
-    mutating func transition(_ action: Action) -> [Effect]
-}
-
 enum FetchStateMachine<T: Equatable>: StateMachine {
     static func == (lhs: FetchStateMachine, rhs: FetchStateMachine) -> Bool {
         switch (lhs, rhs) {
@@ -30,7 +24,18 @@ enum FetchStateMachine<T: Equatable>: StateMachine {
     case loaded([T])
     case error(Error)
     
-    mutating func transition(_ action: Action) -> [Effect] {
+    
+    enum Action {
+        case fetch
+        case fetchSuccess([T])
+        case fetchFailed(Error)
+    }
+    
+    enum Effect {
+        case fetchData
+    }
+    
+    internal mutating func throwingTransition(_ action: Action) throws -> [Effect] {
         switch (self, action) {
         case (.idle, .fetch), (.loaded, .fetch), (.error, .fetch):
             self = .loading
@@ -42,18 +47,7 @@ enum FetchStateMachine<T: Equatable>: StateMachine {
             self = .error(error)
             return []
         default:
-            return []
+            throw StateMachineError.invalidTransition
         }
-    }
-    
-    
-    enum Action {
-        case fetch
-        case fetchSuccess([T])
-        case fetchFailed(Error)
-    }
-    
-    enum Effect {
-        case fetchData
     }
 }

@@ -40,4 +40,10 @@ final class StateMachineTests: XCTestCase {
         let effects = state.transition(.fetch)
         XCTAssertTrue(effects.isEmpty)
     }
+    
+    func testInvalidTransitionShouldNotBePossible() throws {
+        var state = FetchStateMachine<Int>.loading
+        XCTAssertFalse(state.isValidTransition(.fetch))
+        XCTAssertEqual(state, .loading)
+    }
 }

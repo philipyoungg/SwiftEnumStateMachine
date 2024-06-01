@@ -26,6 +26,7 @@ class FetchMachineViewModel<T: Equatable>: ObservableObject {
     
     func send(_ action: State.Action) {
         let effects = self.state.transition(action)
+        
         effects.forEach { effect in
             tasks.append(Task { await effectHandler(effect) })
         }

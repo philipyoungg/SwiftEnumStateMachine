@@ -13,9 +13,9 @@ class TodoViewModel: FetchMachineViewModel<Todo> {
     enum FetchStrategy: String, CaseIterable {
         case Typicode, Mock
         
-        var fetcher: TodoFetchable {
+        var fetcher: TodoRepository {
             switch self {
-            case .Typicode: TypicodeTodoFetcher()
+            case .Typicode: TypicodeTodoRepository()
             case .Mock: MockFetcher()
             }
         }
@@ -26,7 +26,7 @@ class TodoViewModel: FetchMachineViewModel<Todo> {
             self.todoFetcher = fetchStrategy.fetcher
         }
     }
-    var todoFetcher: TodoFetchable
+    var todoFetcher: TodoRepository
     
     init(fetchStrategy: FetchStrategy = .Typicode) {
         self.fetchStrategy = fetchStrategy
@@ -38,7 +38,7 @@ class TodoViewModel: FetchMachineViewModel<Todo> {
         switch effect {
             case .fetchData:
             do {
-                let todo = try await self.todoFetcher.fetch()
+                let todo = try await self.todoFetcher.getTodos()
                 let _ = self.state.transition(.fetchSuccess(todo))
                 
             } catch {

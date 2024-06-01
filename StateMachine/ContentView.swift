@@ -22,7 +22,7 @@ struct ContentView: View {
         case .Todo:
             TodoView(vm: TodoViewModel())
         case .Post:
-            PostView(vm: PostViewModel(fetcher: TypicodePostFetcher()))
+            PostView(vm: PostViewModel(fetcher: TypicodePostRepository()))
         }
     }
 }
