@@ -11,7 +11,7 @@ struct ContentView: View {
     enum Page: String, CaseIterable {
         case Todo, Post
     }
-    @State var page: Page = Page.Todo
+    @State var page: Page = .Post
     var body: some View {
         Picker("Page", selection: self.$page) {
             ForEach(Page.allCases, id: \.self) {
@@ -20,7 +20,7 @@ struct ContentView: View {
         }.pickerStyle(SegmentedPickerStyle())
         switch self.page {
         case .Todo:
-            TodoView(vm: TodoViewModel(initialData: MOCK_TODOS))
+            TodoView(vm: TodoViewModel())
         case .Post:
             PostView(vm: PostViewModel(fetcher: TypicodePostFetcher()))
         }

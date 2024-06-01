@@ -28,19 +28,18 @@ class TodoViewModel: FetchMachineViewModel<Todo> {
     }
     var todoFetcher: TodoFetchable
     
-    init(initialData: [Todo]) {
-        self.fetchStrategy = .Typicode
-        self.todoFetcher = FetchStrategy.Typicode.fetcher
-        super.init(initialState: .idle, initialData: initialData)
+    init(fetchStrategy: FetchStrategy = .Typicode) {
+        self.fetchStrategy = fetchStrategy
+        self.todoFetcher = fetchStrategy.fetcher
+        super.init(initialState: .idle)
     }
     
     override func effectHandler(_ effect: State.Effect) async {
         switch effect {
             case .fetchData:
             do {
-                let data = try await self.todoFetcher.fetch()
-                self.data = data
-                let _ = self.state.transition(.fetchSuccess(data))
+                let todo = try await self.todoFetcher.fetch()
+                let _ = self.state.transition(.fetchSuccess(todo))
                 
             } catch {
                 let _ = self.state.transition(.fetchFailed(error))

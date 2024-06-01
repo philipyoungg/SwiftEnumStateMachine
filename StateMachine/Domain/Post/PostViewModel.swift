@@ -12,7 +12,7 @@ class PostViewModel: FetchMachineViewModel<Post> {
     var fetcher: PostFetchable
     init(fetcher: PostFetchable) {
         self.fetcher = fetcher
-        super.init(initialState: .idle, initialData: [])
+        super.init(initialState: .idle)
     }
     
     override func effectHandler(_ effect: State.Effect) async {
@@ -20,7 +20,6 @@ class PostViewModel: FetchMachineViewModel<Post> {
         case .fetchData:
             do {
                 let posts = try await fetcher.fetch()
-                self.data = posts
                 let _ = self.state.transition(.fetchSuccess(posts))
             } catch {
                 let _ = self.state.transition(.fetchFailed(error))

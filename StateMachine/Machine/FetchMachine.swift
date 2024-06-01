@@ -7,7 +7,13 @@
 
 import Foundation
 
-enum FetchStateMachine<T: Equatable>: Equatable {
+protocol StateMachine: Equatable {
+    associatedtype Action
+    associatedtype Effect
+    mutating func transition(_ action: Action) -> [Effect]
+}
+
+enum FetchStateMachine<T: Equatable>: StateMachine {
     static func == (lhs: FetchStateMachine, rhs: FetchStateMachine) -> Bool {
         switch (lhs, rhs) {
         case (.idle, .idle), (.loading, .loading), (.error, error):
@@ -26,13 +32,13 @@ enum FetchStateMachine<T: Equatable>: Equatable {
     
     mutating func transition(_ action: Action) -> [Effect] {
         switch (self, action) {
-        case (.idle, .fetch), (.loaded, .fetch), (.error(_), .fetch):
+        case (.idle, .fetch), (.loaded, .fetch), (.error, .fetch):
             self = .loading
             return [.fetchData]
-        case (_, .fetchSuccess(let data)):
+        case (.loading, .fetchSuccess(let data)):
             self = .loaded(data)
             return []
-        case (_, .fetchFailed(let error)):
+        case (.loading, .fetchFailed(let error)):
             self = .error(error)
             return []
         default:

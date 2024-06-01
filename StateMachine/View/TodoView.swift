@@ -23,28 +23,14 @@ struct TodoView: View {
         }.pickerStyle(SegmentedPickerStyle())
     }
     
-    var mainView: some View {
+    func mainView(todos: [Todo]) -> some View {
         VStack(alignment: .leading, spacing: 40) {
             strategyPicker
-            self.todoRenderer(todos: vm.data)
             Button("Fetch", action: {
                 vm.send(.fetch)
             })
+            self.todoRenderer(todos: todos)
         }
-    }
-    
-    var loadingView: some View {
-        Text("Loading...")
-    }
-    
-    func errorView(_ error: Error) -> some View {
-        VStack {
-            Text(error.localizedDescription)
-            Button("Fetch", action: {
-                vm.send(.fetch)
-            })
-        }
-        
     }
     
     @ViewBuilder

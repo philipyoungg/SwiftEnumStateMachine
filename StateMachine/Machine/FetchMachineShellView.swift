@@ -8,12 +8,11 @@
 import Foundation
 import SwiftUI
 
-@MainActor
 struct FetchMachineShellView<T: Equatable, U: View>: View {
-    var vm: FetchMachineViewModel<T>
-    var mainView: U
+    @ObservedObject var vm: FetchMachineViewModel<T>
+    var mainView: ([T]) -> U
     
-    init(vm: FetchMachineViewModel<T>, mainView: U) {
+    init(vm: FetchMachineViewModel<T>, mainView: @escaping ([T]) -> U) {
         self.vm = vm
         self.mainView = mainView
     }
@@ -21,9 +20,9 @@ struct FetchMachineShellView<T: Equatable, U: View>: View {
     var body: some View {
         VStack(spacing: 40) {
             switch vm.state {
-            case .idle, .loaded:
-                mainView
-            case .loading:
+            case .loaded(let data):
+                self.mainView(data)
+            case .idle, .loading:
                 Spacer()
                 loadingView
                 Spacer()

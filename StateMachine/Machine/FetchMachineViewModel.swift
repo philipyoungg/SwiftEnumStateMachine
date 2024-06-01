@@ -10,14 +10,16 @@ import Foundation
 @MainActor
 class FetchMachineViewModel<T: Equatable>: ObservableObject {
     typealias State = FetchStateMachine<T>
-    @Published var state: State
-    @Published var data: [T]
+    @Published var state: State {
+        didSet {
+            print(state)
+        }
+    }
     
     var tasks: [Task<Void, Never>] = []
     
-    init(initialState: State, initialData: [T]) {
+    init(initialState: State) {
         self.state = initialState
-        self.data = initialData
     }
     
     deinit { tasks.forEach { $0.cancel() } }
