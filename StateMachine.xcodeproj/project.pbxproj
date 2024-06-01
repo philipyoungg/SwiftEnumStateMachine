@@ -160,7 +160,7 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
-		0C4DA0E22C0B45710071537E /* Machine */ = {
+		0C4DA0E22C0B45710071537E /* FetchMachine */ = {
 			isa = PBXGroup;
 			children = (
 				0C4DA0C92C0B2DC40071537E /* FetchMachine.swift */,
@@ -168,7 +168,7 @@
 				0C4DA0EC2C0B47BF0071537E /* FetchMachineViewModel.swift */,
 				0C4DA0E02C0B453F0071537E /* FetchMachineShellView.swift */,
 			);
-			path = Machine;
+			path = FetchMachine;
 			sourceTree = "<group>";
 		};
 		0C4DA0E32C0B45900071537E /* Post */ = {
@@ -185,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				0C4DA0F62C0B76BD0071537E /* StateMachine */,
+				0C4DA0E22C0B45710071537E /* FetchMachine */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -201,7 +202,6 @@
 		0C4DA0F72C0B77320071537E /* App */ = {
 			isa = PBXGroup;
 			children = (
-				0C4DA0E22C0B45710071537E /* Machine */,
 				0C4DA0DD2C0B45160071537E /* Domain */,
 				0C4DA0DC2C0B450E0071537E /* View */,
 			);
